@@ -1,0 +1,126 @@
+\documentclass{article}
+
+%maths
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%tikzpicture
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}
+\usetikzlibrary{shadows}
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+%colours
+\usepackage{xcolor}
+
+\usepackage{nicefrac}
+
+\begin{document}
+
+\pgfplotsset{
+	standard/.style={
+		axis line style = thick,
+		trig format=rad,
+		enlargelimits,
+		axis x line=middle,
+		axis y line=middle,
+		enlarge x limits=0.15,
+		enlarge y limits=0.15,
+		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=south east}
+	}
+}
+
+\section{Linear Sentences In Two Variables}
+You can solve two equations with the same variables by graphing, substitution, elimination, matrices, anddeterminants.
+
+\subsection{Linear Equations: Solutions Using Graphing}
+To solve by graphing, you plot both equations on a graph and see where they intersect.
+
+\textbf{Example:} $4x + 3y = 6$ \& $2x - 5y = 16$
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[standard, 
+			xtick={-4,-2,0,2,4,6,8},
+			ytick={-4,-3,-2,-1,0,1,2,3},
+			samples=1000,
+			xlabel={$x$},
+			ylabel={$y$},
+			xmin=-4,xmax=9,
+			ymin=-4,ymax=3,
+			clip=false]
+
+			\addplot[
+				<->,
+				blue,  
+				thick, 
+				domain=-4:6,
+				samples=2
+				] {2 - (4/3)*x} node[anchor=north] {$a$};
+
+			\addplot[
+				<->,
+				red,
+				thick,
+				domain=-4:9,
+				samples=2
+				] {(2*x - 16) / 5} node[anchor=south] {$b$};
+				
+				\fill (3,-2)  circle (3pt);
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+From the graph we can see they intersect at (3,-2)
+\newpage
+\subsection{Linear Equations: Solutions Using Substitution}
+Steps: \\ \\
+1. Select one equation to isolate a variable in. Example: Isolate \textit{y} in $E_1$\\
+2. Substitute what the variable equaled into the second equation. Example: y from $E_1$ into $E_2$\\
+3. Solve the new $E_2$ now that it only has one variable to solve for.\\
+4. Using both newly found variables, substitute them into both equations to make sure it's correct. Example result should be 1=1 -5=-5.\\
+\\
+If the result is not equal like the example in step 4 then the system is inconsistent and there is no solution.
+
+\subsection{Linear Equations: Solutions Using Elimination}
+Steps: \\\\
+1. Stack both equations while they are in \textit{standard form}.\\
+2. Multiply both equations so that one variable is eliminated by being opposites of eachother.\\
+3. Add the equations -- leaving one variable in the equation.\\
+4. Solve for the remaining variable\\
+5. Repeat steps 2-4 or solve for the second variable through substitution.\\
+6. Check your solution by plugging in the variables into both original equations.\\
+
+\subsection{Linear Equations: Solutions Using Matrices}
+A \textbf{matrix} is a rectangular array of numbers or variables. It represents the system of equations in standard form using only coefficients and constants.\\
+\\
+$$
+\begin{bmatrix}
+	2 & 4 & 6\\
+	1 & 2 & 3
+\end{bmatrix}
+$$
+
+The last column being what each equation equals. Now solve it the same as elimination.
+
+\subsection{Linear Equations: Solutions Using Determinants}
+A \textbf{determinant} is a square array of numbers or variables enclosed between vertical lines. They differ from matrices as determinants have a numerical value. \\
+\\
+You solve by multiplying diagnonally and then doing the same again but this time using the original equations answers. This is also called \textbf{Cramer's Rule}.
+\\
+
+\subsection{Linear Inequalities: Solutions Using Graphing}
+You graph each equation and shade the section which makes the equation true. Afterwards there will be one specific section where they overlap. If they dont overlap, then there is no solution.
+\end{document}

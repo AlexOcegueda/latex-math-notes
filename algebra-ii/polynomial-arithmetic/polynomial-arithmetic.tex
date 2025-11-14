@@ -1,0 +1,75 @@
+\documentclass{article}
+
+%maths
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%tikzpicture
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}
+\usetikzlibrary{shadows}
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+%colours
+\usepackage{xcolor}
+
+\usepackage{nicefrac}
+
+\begin{document}
+\section{Polynomial Arithmetic}
+
+\subsection{Adding and Subtracting Polynomials}
+\textbf{Monomial} is an expression that could be a numeral, a variable, or the product of numerals and variables within certain restrictions.\\
+\\
+1. Must have whole number exponents.\\
+2. Variables do not appear under simplified radical expressions.\\
+3. Denominators do not contain variables.\\
+
+\textbf{Examples:} $-10$, $a$, $5t^2$, $3/8x^2y^3$ \\
+\\
+\textbf{Binomial} is an expression that is the sum of two monomials.\\
+\textbf{Trinomial} is an expression that is the sum of three monomials.\\
+\textbf{Polynomial} is an expression that is a monomial or the sum of two or more monomials.\\
+\\
+
+\subsection{Multiplying Polynomials}
+1. $x^ax^b = x^{a+b}$ \\Multiplying monomials with the same base you keep the base and add the powers.\\\\
+2. $(x^a)^b = x^{ab}$\\ Keep the base and multiply the powers when finding powers of a base.\\\\
+3. $(xy)^a = x^ay^a$ \\Raise each factor in the proudct to the power when finding the powers of a product\\\\
+
+\subsection{Special Products of Binomials}
+\textbf{Conjugates} are two binomials with the same two terms but opposite signs separating the terms. They are conjugates of each other.\\
+\\Example: $3x + 2$ \& $3x - 2$\\
+
+\textbf{Difference of Squares} is the \textit{product} of conjugates which produces a special pattern.\\
+\\Example: $(x + y)(x - y) = x^2 - y^2$\\
+\\
+\textbf{Square Trinomial} is the pattern produced by squaring a binomial.\\
+\\Example: $(x + y)^2 = x^2 + 2xy + y^2$ \& $(x - y)^2 = x^2 - 2xy + y^2$\\
+\\
+Notice how only the \textit{first} sign is changed when subtracting a squared binomial.
+\\ \\
+
+\subsection{Dividing Polynomials}
+\begin{center}
+	\framebox{$a^m/a^n = a^{m-n}$} \\
+\end{center}
+This works as long as a does not equal zero.\\
+\\
+\begin{center}
+	\framebox{$a^-n = 1/a^n$ \& $1/a^-n = a^n$} \\
+\end{center}
+This works as long as \textit{a} does not equal zero.\\ Also works in reverse.
+\\
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass{article}
+
+%maths
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%tikzpicture
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}
+\usetikzlibrary{shadows}
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+%colours
+\usepackage{xcolor}
+
+\usepackage{nicefrac}
+
+\begin{document}
+
+\pgfplotsset{
+	standard/.style={
+		axis line style = thick,
+		trig format=rad,
+		enlargelimits,
+		axis x line=middle,
+		axis y line=middle,
+		enlarge x limits=0.15,
+		enlarge y limits=0.15,
+		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=south east}
+	}
+}
+
+\section{Relations And Functions}
+
+\textbf{Relation} is a set of ordered pairs that can be represented by a diagram, graph, or sentence.\\
+\\
+The \textbf{Domain} is the set of all \textit{first} numbers of the ordered pairs in a relation.\\
+The \textbf{Range} is the set of all \textit{second} numbers of the ordered pairs in a relation. \\
+\\
+A \textbf{Function} is when none of the domain values are repeated.\\
+A \textbf{Vertical Line Test} is a test for functions.\\
+\\
+\subsection{Compositions of Functions}
+A \textbf{composite function} is when a variable is replaced with another function.\\
+\\
+Example: f(g(x)) is read as: 'f of g of x'\\
+\\
+\textbf{Inverse Relations} is when you reverse ordered pairs of an initial relation.\\
+The \textbf{identity function} is the line which if you folded the graph over on this line/crease it would line up both relations. Since for each replacement of x, the result is identical to x.
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[standard, 
+			xtick={-4,-3,-2,-1,0,1,2,3,4,5,6,7,8},
+			ytick={-4,-3,-2,-1,0,1,2,3,4,5,6,7,8},
+			samples=1000,
+			xlabel={$x$},
+			ylabel={$y$},
+			xmin=-4,xmax=8,
+			ymin=-4,ymax=8,
+			clip=false]
+
+			% horizontal line - a
+			\addplot[
+				<->,  
+				thick, 
+				domain=-4:8,
+				samples=2
+				] {x} node[anchor=south] {$y=x$};
+
+			\fill (2,1) circle (2pt);
+			\fill (1,2) circle (2pt);
+			\fill (6,4) circle (2pt);
+			\fill (4,6) circle (2pt);
+			\fill (8,3) circle (2pt) node[anchor=south] {$R^{-1}$};
+			\fill (3,8) circle (2pt) node[anchor=south] {$R$};
+
+
+
+
+
+
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\end{document}

@@ -1,47 +1,5 @@
-\documentclass{article}
-
-%maths
-\usepackage{mathtools}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-
-%tikzpicture
-\usepackage{tikz}
-\usepackage{scalerel}
-\usepackage{pict2e}
-\usepackage{tkz-euclide}
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns,arrows.meta}
-\usetikzlibrary{shadows}
-
-%pgfplots
-\usepackage{pgfplots}
-\pgfplotsset{compat=newest}
-\usepgfplotslibrary{statistics}
-\usepgfplotslibrary{fillbetween}
-
-%colours
-\usepackage{xcolor}
-
-\usepackage{nicefrac}
-
-\begin{document}
-
-\pgfplotsset{
-	standard/.style={
-		axis line style = thick,
-		trig format=rad,
-		enlargelimits,
-		axis x line=middle,
-		axis y line=middle,
-		enlarge x limits=0.15,
-		enlarge y limits=0.15,
-		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
-		every axis y label/.style={at={(current axis.above origin)},anchor=south east}
-	}
-}
-
+\chapter{Relations and Functions}
+This chapter talks about sets of ordered pairs and how they are symbolized and represented.
 \section{Relations And Functions}
 
 \textbf{Relation} is a set of ordered pairs that can be represented by a diagram, graph, or sentence.\\
@@ -87,13 +45,7 @@ The \textbf{identity function} is the line which if you folded the graph over on
 			\fill (8,3) circle (2pt) node[anchor=south] {$R^{-1}$};
 			\fill (3,8) circle (2pt) node[anchor=south] {$R$};
 
-
-
-
-
-
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
 
-\end{document}

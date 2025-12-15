@@ -1,47 +1,4 @@
-\documentclass{article}
-
-%maths
-\usepackage{mathtools}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-
-%tikzpicture
-\usepackage{tikz}
-\usepackage{scalerel}
-\usepackage{pict2e}
-\usepackage{tkz-euclide}
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns,arrows.meta}
-\usetikzlibrary{shadows}
-
-%pgfplots
-\usepackage{pgfplots}
-\pgfplotsset{compat=newest}
-\usepgfplotslibrary{statistics}
-\usepgfplotslibrary{fillbetween}
-
-%colours
-\usepackage{xcolor}
-
-\usepackage{nicefrac}
-
-\begin{document}
-
-\pgfplotsset{
-	standard/.style={
-		axis line style = thick,
-		trig format=rad,
-		enlargelimits,
-		axis x line=middle,
-		axis y line=middle,
-		enlarge x limits=0.15,
-		enlarge y limits=0.15,
-		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
-		every axis y label/.style={at={(current axis.above origin)},anchor=south east}
-	}
-}
-
+\chapter{Coordinate System}
 \section{Rectangular Coordinate System}
 \textbf{Coordinates of a point} is how each point on a plane is assigned a pair of numbers.\\
 \textbf{Origin} is the point of \textit{intersection} of the x-axis and y-axis.\\
@@ -163,4 +120,3 @@ They can be written in the form of Ax + By = C, where A \& B are not zero. If th
 If it is 'or equal to' then you make the line solid when graphing.\\ If it is not, then you make the line dotted as a boundary. This is because you are not counting what is on the line. 
 \\\\
 Now you want to plot a test point that is \textit{not} on the line. If this test point is true for the inequality then shade the side it is on, if not, shade the opposite side if it is false.
-\end{document}

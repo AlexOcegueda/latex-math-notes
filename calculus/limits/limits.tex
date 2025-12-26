@@ -1,0 +1,63 @@
+\chapter{Limits} Used in defining the important concepts in calculus such as continunity, derivative of a function, the definite integral of a function.
+\section{What are Limits}
+It's easy to brush off limits due to their inherent simplicity in solving for them, but it's good to know what is happening when you say a limit equals something. This means that as you zoom in on that one area it is \textit{approaching}, the number it equals, despite it potentially never reaching it, still is the answer. The limit is the number you inch closer and closer to while zooming in.\\
+
+\subsection{Inituitive Definition}
+The \textbf{limit} of a function describes the behavior of a function near a particular value of x.\\
+\\
+When a limit heads towards infinity due to a vertical asymptote this is said to be a \textbf{infinite limit}.\\
+
+\section{One-Sided Limits}
+When a limit has a '-' sign that means the limit as it approaches from the \textit{left}.\\
+When a limit has a '+' sign that means the limit as it approaches from the \textit{right}.\\
+\\
+
+\section{Trigonometric Functions}
+There are four important limit functions:\\
+1. $\lim\limits_{x \to c} sinx = sinc$\\
+2. $\lim\limits_{x \to c} cosx = cosc$\\
+3. $\lim\limits_{x \to 0} \frac{sinx}{x} = 1$\\
+4. $\lim\limits_{x \to 0} \frac{1-cosx}{x} = 0$
+
+\section{Continunity}
+Three conditions must be met for a point to considered continuous:\\
+1.  f(c) exists\\
+2. $\lim\limits_{x \to c} f(x)$\\
+3. $\lim\limits_{x \to c} f(x) = f(c)$
+
+\newpage
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[standard,
+			xtick={-7,...,6},
+			ytick={-4,...,5},
+			samples=1000,
+			xlabel={$x$},
+			ylabel={$y$},
+			xmin=-7,xmax=6,
+			ymin=-4,ymax=5,
+			clip=false]
+
+			\addplot[
+				<->,
+				thick,
+				] {x+2} node[anchor=south] {c};
+
+			\coordinate (P) at (axis cs: 2, 4); % Define a coordinate at the point (0, 2)
+			\draw[thick,fill=white] (P) circle (3pt) node[right] {b}; % Draw a hollow circle centered at P
+		
+			\coordinate (Q) at (axis cs: 2, 1); % Define a coordinate at the point (0, 2)
+			\draw[thick,fill=black] (Q) circle (3pt) node[right] {a}; % Draw a hollow circle centered at P
+		
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+In the graph above we can say multiple things:\\
+1. A limit exists at $f(b)$ which is 4.\\
+2. The limit \textit{at} $f(b)$ is 1 aka 'a'.\\
+3. This line has a disconnected continunity. \\
+\\
+A test would be to imagine a pencil going along $f(x)$ without having to be picked up -- if it can accomplish this then it is continuous.
+
+

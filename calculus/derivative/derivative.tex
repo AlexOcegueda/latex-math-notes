@@ -1,0 +1,101 @@
+\chapter{Derivatives}
+
+\section{What is a Derivative}
+It is the instantaneous rate of change which says how much something changes in relation to another. It's the slope of the tangent line at any given point revealing steepness and direction (increasing/decreasing). 
+
+\subsection{Definition}
+The derivative of a function $y = f(x)$ at point $(x, f(x))$, is defined as:
+\begin{center}
+	$\lim\limits_{\delta x \to 0} \frac{f(x + \delta x) - f(x)}{\delta x}$
+\end{center}
+
+Example: Using the definition, find the derivative of $f(x) = 5x - 4$\\
+\\
+You will want to add in delta into $f(x)$ when you utilize the definition.
+\\
+\begin{equation*}
+    \begin{aligned}
+        L &= \lim_{\Delta x \to 0} \frac{(5(x + \Delta x) - 4) - (5x - 4)}{\Delta x} \\
+          &= \lim_{\Delta x \to 0} \frac{5x + 5\Delta x - 4 - 5x + 4}{\Delta x} \\
+          &= \lim_{\Delta x \to 0} \frac{5\Delta x}{\Delta x} \\
+          &= \lim_{\Delta x \to 0} 5 \\
+          &= 5
+    \end{aligned}
+\end{equation*}
+
+Note that \textbf{Differentiability implies continuity, but continuity \textit{does not} imply differentiability} 
+
+\section{Differentiation Rules}
+1. If $f(x) = c$ where c is a constant, then $f'(x) = 0$.\\
+2. If $f(x) = c * g(x),$ then $f'(x) = c \cdot g'(x)$.\\
+3. Sum Rule: If $f(x) = g(x) + h(x)$ then $f'(x) = g'(x) + h'(x)$.\\
+4. Difference Rule: If $f(x) = g(x) - h(x)$, then $f'(x) = g'(x) - h'(x)$.\\
+5. Product Rule: If $f(x) = g(x) \cdot h(x)$, then $f'(x) = f(x)g'(x) + g(x)f'(x).$\\
+6. Quotient Rule: If $f(x) = g(x) / h(x)$, then $f'(x) = \frac{g'(x) \cdot h(x) - h'(x)g(x)}{[h(x)]^2}$
+
+\section{Trigonometric Functions}
+The 6 trigonometric functions also have rules:\\
+1. If $f(x) = sinx,$ then $f'(x) = cosx$\\
+2. If $f(x) = cosx,$ then $f'(x) = -sinx$\\
+3. If $f(x) = tanx,$ then $f'(x) = sec^2x$\\
+4. If $f(x) = cotx,$ then $f'(x) = -csc^2x$\\
+5. If $f(x) = secx,$ then $f'(x) = secxtanx$\\
+6. If $f(x) = cscx,$ then $f'(x) = -cscxcotx$\\
+
+
+\subsection{Inverse Trigonometric Functions}
+The 6 inverse trigonometric functions also have derivatives:\\
+1. If $f(x) = \sin^{-1}x = \arcsin x$\\
+$f'(x) = \frac{1}{\sqrt{1-x^2}}$\\
+2. If $f(x) = \cos^{-1}x = \arccos x$\\
+$f'(x) = \frac{-1}{\sqrt{1-x^2}}$\\
+3. If $f(x) = \tan^{-1}x = \arctan x$\\
+$f'(x) = \frac{1}{1+x^2}$\\
+4. If $f(x) = \cot^{-1}x = \arccot x$\\
+$f'(x) = \frac{-1}{1+x^2}$\\
+5. If $f(x) = \sec^{-1}x = \arcsec x$\\
+$f'(x) = \frac{1}{x\sqrt{x^2-1}}$\\
+6. If $f(x) = \csc^{-1}x = \arccsc x$\\
+$f'(x) = \frac{-1}{\sqrt{1-x^2}}$\\
+
+\section{Chain Rule}
+The \textbf{chain rule} is a technique for finding the derivative of composite functions. With the number of differentiation steps dependent on how many functions there are. \\
+\\Example 1:\\ $f(x) = (g \circ h)(x) = g[h(x)]$ then \\
+$f'(x) = g'[h(x)] \cdot h'(x)$
+\\\\
+Example 2:\\$r(x) = (m \circ n \circ p)(x) = m\{n[p(x)]\}$\\
+then $r'(x) = m'\{n[p(x)]\} \cdot n'[p(x)] \cdot p'(x)$
+
+\section{Differentiation of Exponential and Logarithmic Functions}
+Here are their differentiations formulas:\\
+1. If $f(x) = e^x,$ then $f'(x) = e^x$.\\
+2. If $f(x) = a^x, a > 0, a \neq 1$, then $f'(x) = (\ln a)\cdot a^x$.\\
+3. If $f(x) = \ln x$, then $f'(x) = \frac{1}{x}$.\\
+4. If	$f(x) = \log_{a} x, a > 0, a \neq 1, then f'(x) = \frac{1}{(\ln a)\cdot x} $.
+
+\newpage
+\section{Implicit Differentiation}
+Implicit Differentiation allows you to find the derivative of y with respect to x without having to solve the given equation for y.
+\\\\
+Example: Find $y'$ when $y = \sin x + \cos y$
+\begin{equation*}
+	\begin{aligned}
+		y' &= \cos x - \sin y \cdot y' \\
+    y' + \sin y \cdot y' &= \cos x  \\
+    y'(1 + \sin y)    &= \cos x \\
+        y' &= \frac{\cos x}{(1 + \sin y)} \\
+    \end{aligned}
+\end{equation*}
+
+\section{Higher Order Derivative}
+The degree of derivative depends on how many successive derivatives where taken which are called \textbf{higher order derivative}.\\
+\\
+\noindent \textbf{Example:} Find the second derivative of $f(x) = 20x^3 - 9x^2 + 3x + 2$.
+
+\begin{equation*}
+    \begin{aligned}
+        f'(x)  &= 60x^2 - 18x + 3 \\
+        f''(x) &= 120x - 18
+    \end{aligned}
+\end{equation*}
+

@@ -1,0 +1,103 @@
+\chapter{Applications of the Derivative}
+
+\section{Tangent and Normal Lines}
+The normal line is defined as the line that is perpendicular to the tangent line
+
+\section{Critical Points}
+The point $(x, f(x))$ is called a critical point if $f'(x)$ is in the domain of the function and is 0 or doesn't exist. \\
+\\
+An important application of critical points is in finding the maxima and minima of a function.
+
+\section{Extreme Value Theorem}
+The Extreme Value Theorem helps us guarentee a max and min under certain conditions on an interval.
+\\
+\begin{mybox}{Extreme Value Theorem.}
+  If a function $f(x)$ is continuous on a closed interval $[a,b]$, 
+  then $f(x)$ has a max and min value on $[a,b]$.
+\end{mybox}
+
+\section{Mean Value Theorem}
+The \textbf{Mean Value Theorem} establishes a relationship between the slope of a tangent line to a curve and a secant line through points on a curve at the endpoints of an interval. The theorem goes:
+\[
+f'(c) = \frac{f(b) - f(a)}{b - a}
+\] 
+\begin{mybox}{Mean Value Theorem.}
+	If a function $f(x)$ is continuous on a closed interval [a,b] and differentiable on an open interval (a,b), then at least one number c $\in$ (a,b).
+\end{mybox}
+
+\section{Increasing/Decreasing Functions}
+The derivative may be used to determine whether a function is increasing, decreasing, or an inflection point. If $f'(x) > 0$ then it is increasing but if $f'(x) < 0$ then it is decreasing.\\
+\\
+You first find all critical points in the domain value then test the values to the left and right of them to determine if the critical points are positive or negative.
+
+\subsection{First Derivative Test for Local Extrema}
+If the derivative switches signs around the critical point, the function is said to have a \textit{local (relative) extremum}.\\
+1. Positive to Negative : \textit{local (relative) maximum}\\
+2. Negative to Positive : \textit{local (relative) minimum}\\
+\\
+Determining this is called the \textbf{First Derivative Test for Local Extrema}
+
+\subsection{Second Derivative Test for Local Extrema}
+This focuses on concavity or the bend the of the line. It is used to find the same the local extremas like with the first test. The main benefit being the this test is quicker but can be inconclusive and relies on being able to derive the second derivative.
+\\\\
+You apply it by finding the critical points and testing whether they are concave up or down.\\
+\\
+1. Local Maximum: $f''(c) < 0$ concave down.
+2. Local Minimum:  $f''(c) > 0$concave up.
+3. Inconclusive: $f''(c) = 0$ tells you nothing.
+
+\subsection{Concavity and Points of Inflection}
+If the concavity of a function changes from concave up to down or vice versa around a point then this is a inflection point. You find these by applying the first derivative test.
+
+\section{Distance, Velocity, Acceleration}
+1. $f'(x)$ = Velocity of particle
+2. $f'(x)$ = Acceleration of particle
+
+\section{Related Rates}
+Related rates is just watching how two rates relate given an invisible variable of time.\\
+\\
+Picture a balloon. Air goes in. The balloon’s radius grows. The volume grows too. You’re not asked “what is the radius” or “what is the volume.” You’re asked: if one is changing this fast, how fast is the other changing right now?\\\\
+Key: \\
+1. Write the geometric formula.\\
+2. Pretend every variable depends on time.\\
+3. Differentiate both sides with respect to time.\\
+4. Plug in the numbers for the instant you care about.\\
+
+\section{Differentials}
+A differential is a tiny change and they talk about impact. A fast change with a tiny coefficient can matter less than a slow change with a huge one. Differentials make that visible.
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[standard,
+			xtick={-7,...,6},
+			ytick={-4,...,5},
+			samples=1000,
+			xlabel={$x$},
+			ylabel={$y$},
+			xmin=-7,xmax=6,
+			ymin=-4,ymax=5,
+			clip=false]
+
+			\addplot[
+				<->,
+				thick,
+				] {x+2} node[anchor=south] {c};
+
+			\coordinate (P) at (axis cs: 2, 4); % Define a coordinate at the point (0, 2)
+			\draw[thick,fill=white] (P) circle (3pt) node[right] {b}; % Draw a hollow circle centered at P
+		
+			\coordinate (Q) at (axis cs: 2, 1); % Define a coordinate at the point (0, 2)
+			\draw[thick,fill=black] (Q) circle (3pt) node[right] {a}; % Draw a hollow circle centered at P
+		
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+In the graph above we can say multiple things:\\
+1. A limit exists at $f(b)$ which is 4.\\
+2. The limit \textit{at} $f(b)$ is 1 aka 'a'.\\
+3. This line has a disconnected continunity. \\
+\\
+A test would be to imagine a pencil going along $f(x)$ without having to be picked up -- if it can accomplish this then it is continuous.
+
+

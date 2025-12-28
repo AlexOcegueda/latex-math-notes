@@ -25,9 +25,27 @@
 
 %colours
 \usepackage{xcolor}
-
+\usepackage[most]{tcolorbox}
 \usepackage{nicefrac}
 \usepackage{geometry}
+
+\newtcolorbox{mybox}[1]{
+    enhanced,
+    colback=white,                    % Background color
+    colframe=black,                   % Border color
+    fonttitle=\bfseries,
+    colbacktitle=black,               % Title background color
+    title={#1},
+    attach boxed title to top left={
+        xshift=10mm,                         % Position from the left
+        yshift=-2mm,                         % "Sinks" the label into the border
+        yshifttext=-1mm
+    },
+    boxed title style={sharp corners, boxrule=0.5pt},
+    sharp corners,                           % Makes the main box rectangular
+    top=4mm                                  % Space for text below the title
+}
+
 \geometry{
   a4paper, % or letterpaper
   top=1.5in,
@@ -36,6 +54,12 @@
   right=2in,
   headheight=14pt
 }
+
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+
 \title{Calculus Math Notes}
 \author{Alexys Ocegueda Castro}
 
@@ -60,8 +84,8 @@
 
 \include{limits/limits}
 \include{derivative/derivative}
-%\include{exponential-log-functions/exponential-log-functions}
-%\include{factor-polynomials/factor-polynomials}
+\include{applications/applications}
+\include{integration/integration}
 %\include{linear-sentences/one}
 %\include{linear-sentence-two-vars/two-vars}
 %\include{polynomial-arithmetic/polynomial-arithmetic}

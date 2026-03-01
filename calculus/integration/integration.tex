@@ -1,0 +1,55 @@
+\chapter{Integration}The Antiderivative, the integral.
+
+\section{Antiderivative}
+The \textbf{Antiderivative} is simply the inverse of the derivative. There are infinitely many antiderivatives for functions. An example would be $F(x) = x^3, G(x) = x^3+5, H(x) = x^3 - 2$ being antiderivatives of  $f(x) = 3x^2$. That being said they are only differing by a constant -- they are only different by their vertical position.\\
+\\
+The notation to represent all antiderivatives of a function $f(x)$ is the indefinite integral; symbol is $\int$, where $\int f(x)dx=F(x)+C$. f(x) is called the integrand and the C is called the constant of integration.
+
+\subsection{Basic Formulas}
+\begin{enumerate}
+    \item $\int k f(x) \, dx = k \int f(x) \, dx$
+    \item $\int [f(x) \pm g(x)] \, dx = \int f(x) \, dx \pm \int g(x) \, dx$
+    \item $\int k \, dx = kx + C$
+    \item $\int x^n \, dx = \frac{x^{n+1}}{n+1} + C$
+\end{enumerate}
+
+\section{Substitution and Change of Variables}
+Often compared to the chain rule, the \textbf{substitution and change of variables} is used to make indefinite integrals easier to work with. In the method, you first subsititute the inside function with a single variable, usually $u$, to be able to utilize the other basic integration rules.
+
+\section{Integration by Parts}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[standard,
+			xtick={-7,...,6},
+			ytick={-4,...,5},
+			samples=1000,
+			xlabel={$x$},
+			ylabel={$y$},
+			xmin=-7,xmax=6,
+			ymin=-4,ymax=5,
+			clip=false]
+
+			\addplot[
+				<->,
+				thick,
+				] {x+2} node[anchor=south] {c};
+
+			\coordinate (P) at (axis cs: 2, 4); % Define a coordinate at the point (0, 2)
+			\draw[thick,fill=white] (P) circle (3pt) node[right] {b}; % Draw a hollow circle centered at P
+		
+			\coordinate (Q) at (axis cs: 2, 1); % Define a coordinate at the point (0, 2)
+			\draw[thick,fill=black] (Q) circle (3pt) node[right] {a}; % Draw a hollow circle centered at P
+		
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+In the graph above we can say multiple things:\\
+1. A limit exists at $f(b)$ which is 4.\\
+2. The limit \textit{at} $f(b)$ is 1 aka 'a'.\\
+3. This line has a disconnected continunity. \\
+\\
+A test would be to imagine a pencil going along $f(x)$ without having to be picked up -- if it can accomplish this then it is continuous.
+
+
